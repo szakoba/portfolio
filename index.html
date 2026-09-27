@@ -1,51 +1,205 @@
-<!-- a.html -->
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="UTF-8">
+
 <head>
   <meta charset="UTF-8">
   <title>M G Portfolio</title>
   <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="checkbox.css">
+  <link rel="stylesheet" href="drawers.css">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="news.css">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
-<script>
-  function includeHTML() {
-    var z, i, elmnt, file, xhttp;
-    /*loop through a collection of all HTML elements:*/
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-      elmnt = z[i];
-      /*search for elements with a certain attribute:*/
-      file = elmnt.getAttribute("w3-include-html");
-      if (file) {
-        /*make an HTTP request using the attribute value as the file name:*/
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4) {
-            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-            /*remove the attribute, and call this function once more:*/
-            elmnt.removeAttribute("w3-include-html");
-            includeHTML();
-          }
-        }      
-        xhttp.open("GET", file, true);
-        xhttp.send();
-        /*exit the function:*/
-        return;
-      }
-    }
-  };
-  </script>
-
 <body>
 
-  <div w3-include-html="menu.html"></div>
 
-  <script>
-    includeHTML();
-  </script>
+
+<iframe src="en/main.html" class="maincontent" name="mainframe" title="mainframe" id="mainframe"></iframe>
+
+
+<part-newsbar>
+  <div class="news-container">
+      <div class="news-ticker-wrapper">
+          <div class="news-ticker" id="news-ticker"></div>
+      </div>
+  </div>
+  <script src="news.js"></script>
+</part-newsbar>
+
+<part-drawers>
+  <details name="drawer" class="leftDrawer"><summary>contact options </summary>
+  <p>email address<br>mikolaj.grabowski[at]icloud.com</p>
+  <p>instagram<br>@szakoba2</p>
+  <p>discogs here</p>
+  <p>download my portfolio PDF here</p>
+  </details>
+  <details name="drawer" class="rightDrawer"><summary>about me </summary>
+    <p><mark>LONG STORY SHORT</mark> I was born in 1996 in Warsaw, Poland, which places me on the threshold
+    between millenial and gen&nbsp;z. First and foremost I am a creative, graphic designer and type designer.
+    If necessary I can also play with animation and come up with a catchy headline. Kinda jack of all trades, 
+    hopefully master of some. I'm eager to learn new things of which this website (built by me) may be a proof.
+    </p><p><mark>WHAT I DO NOW</mark> I’ve been working for the past two and a&nbsp;half years as Designer at
+    Molecular Creative, although what I&nbsp;do here is much wider than
+    that. This is my first job in a&nbsp;creative agency, so at the beginning I&nbsp;was only assigned
+    work on e-commerce product assets, but soon enough I&nbsp;joined the creative team
+    and began working as lead creative designer on campaigns for the company’s
+    major clients – MBANK and MLEKPOL. My key visual for MBANK's cybercrime podcast
+    has been reproduced on the Internet and social media, on out of home formats, in
+    cinemas and TV commercials. I’ve worked on key visuals, photoshoots, editing both
+    photo and video, social media, animation and so on. I&nbsp;also tackle briefs from our foreign based partners
+    for brands such as MATTEL, ELANCO and PHILIP MORRIS, ALDI, DANONE.
+    </p><p><mark>MY LORE</mark> My beginnings were spectacular – I&nbsp;designed my first type family in 2015 at the
+    age of 18. After releasing it on MyFonts, it has surprised me with its sales which
+    I&nbsp;had not expected after something I&nbsp;was doing after school, before my homework
+    every day. It was a&nbsp;Hot New font, a&nbsp;Rising Star, it was featured in a&nbsp;Polish art/design
+    magazine, It was seen on windows of a&nbsp;book store, a&nbsp;restaurant, gas stations and on
+    a&nbsp;can of a&nbsp;stock beer. This all happened before I&nbsp;began my studies at the Academy
+    of Fine Arts, where I&nbsp;got real insight into what good lettermaking means. Since the
+    first year, I&nbsp;have released several type families, building my own expertise in color
+    fonts. However, during my studies I&nbsp;focused on my artistic career, rather than the
+    one of a&nbsp;graphic designer. I&nbsp;spent most of my time in photographic darkroom which
+    to no surprise requires the same set of skills as fontmaking – accuracy, immersion
+    in work, focus and good abstract visual perception. Artistic education taught me
+    to think in a&nbsp;critical way and outside the box. I&nbsp;am ready to work on a&nbsp;variety of
+    projects and introduce my own ideas to them. I&nbsp;definitely have a&nbsp;stylistic preference
+    of an organised, brutalist mess,
+    although I&nbsp;am versatile and can achieve very sensual visuals, like I&nbsp;did with Łaciate.
+    </p><p><mark>WHAT I CAN DO</mark> For several years, I&nbsp;had been employed as an Teaching Assistant in Painting at the
+    AFa&nbsp;which has challenged me with many organisational tasks
+    when managing and planning group exhibitions. I&nbsp;have always been at
+    ease in co-operation.
+    I&nbsp;am skilled in Adobe programs – Ps (pro), AI&nbsp;(pro), Id (pro), Pr (good),
+    Ae (good). I&nbsp;can put together a&nbsp;neat PowerPoint deck. I&nbsp;know Glyphs
+    almost inside out and often prefer to use it even for non-type vector tasks over
+    Illustrator which ensures that my vectors are point-perfect. I’ve been rather
+    reluctant towards Figma&nbsp;and Canva, but I&nbsp;have a&nbsp;very unique skill of mastering
+    anything quickly should such need arise. Apart from skills that you would seek in an
+    applicant, I&nbsp;must address my love for languages. I&nbsp;speak English fluently and
+    communicate in French, Polish being my mother tongue. Currently I'm in the process of mastering Finnish.
+    </p>
   
+  
+  </details>
+  <details name="drawer" class="bottomDrawer"><summary>resumé / cv </summary>
+    <p>I work in graphic design, typography, lettering, logo design; photography; preparation for print and digital media; ani&shy;mation and video editing;
+      a bit of creative direction and copyrighting.</p>
+  
+    <p style="text-align: left; margin-bottom:5px;"><mark>MY COMPUTER SKILLS</mark> Photoshop&nbsp;<span class="skill">PRO</span>, InDesign&nbsp;<span class="skill">PRO</span>,
+    Illustrator&nbsp;<span class="skill">PRO</span>, Lightroom&nbsp;<span class="skill">VG</span>, Premiere Pro&nbsp;<span class="skill">VG</span>, 
+    AfterEffects&nbsp;<span class="skill">VG</span>, Glyphs&nbsp;<span class="skill">PRO</span>; Office&nbsp;suite&nbsp;<span class="skill">OK</span>
+    HTML/CSS&nbsp;<span class="skill">BASIC</span> <mark>MY LANGUAGE SKILLS</mark> English&nbsp;<span class="skill">B2/C1</span>, French&nbsp;<span class="skill">B1</span>, 
+    Finnish&nbsp;<span class="skill">A2</span> and Polish&nbsp;<span class="skill">NATIVE</span> <mark>OTHER SKILLS</mark> experience in project
+    management, organisational skills, team player, delivery on time</p>
+  <details name="job" class="job"><summary>since 2024: <mark class="secondaryMark">GRAPHIC DESIGNER</mark> at Molecular Creative /&nbsp;Omnicom Production (full-time, hybrid)</summary>
+    I've been designing graphics, editing videos and anima&shy;tions for the Agency’s clients, including MBANK, MLEKPOL, MERCEDES-BENZ and e-commerce brands such as PHILIPS, MARS, DANONE and others;
+    developing adver&shy;tising campaigns in terms of art direction and copy&shy;writing; participating in photo shoots, creating content for social media;
+    supporting pitch processes; handling briefs from Agency’s abroad partners and communicating in&nbsp;English.
+  </details>  
+  <details name="job" class="job"><summary>2023—2024: <mark class="secondaryMark">SOCIAL MEDIA&nbsp;MANAGER</mark> at Krupa&nbsp;Gallery / Krupa&nbsp;Art Foundation (freelance, remote)</summary>
+    I&nbsp;was responsible for content creation and social media&nbsp;management on Instagram and Facebook for two leading private Polish art galleries;
+    graphic design and animation for digital formats; photo retouching and editing.
+  </details>
+  <details name="job" class="job"><summary>2018—2022: <mark class="secondaryMark">ASSISTING TEACHER of Painting</mark> at Academy of Fine Arts in Warsaw (part-time, on-site)</summary>
+    I&nbsp;taught painting to a&nbsp;group of around 30 students through practical classes and lectures;
+    I&nbsp;organized multi&shy;ple exhibitions both within and outside the Academy; I&nbsp;was managing logistics and hiring models.
+  </details>
+  <details name="job" class="job"><summary>since 2015: <mark class="secondaryMark">FREELANCE GRAPHIC AND FONT DESIGNER</mark></summary>
+    I've been designing logos, icons, animations, and other brand communication elements for clients, including a&nbsp;public
+    cultural institution, a&nbsp;catering company, a&nbsp;real estate developer, a&nbsp;classical music competition, and an educational startup; 
+    I've produced original fonts (see store) which cover Latin, Cyrillic and Arabic scripts. I've been featured in
+    <a class="external" href="https://typoteka.pl/pl/designer/mikolaj-grabowski" target="_blank">Typoteka&ensp;▸</a>,
+    <a class="external" href="https://issuu.com/beczmiana/docs/notes105-internet/192" target="_blank">Bęc Zmiana /&nbsp;NN6T#105&ensp;▸</a>,
+    and <a class="external" href="https://issuu.com/beczmiana/docs/130_nn6t_elektro/158" target="_blank">NN6T#130&ensp;▸</a>, 
+    <a class="external" href="https://www.youworkforthem.com/blog/2021/09/24/achtung-pay-attention-to-mikolaj-grabowski/" target="_blank">YouWorkForThem&ensp;▸</a>
+    <a class="external" href="https://www.myfonts.com/pages/newsletters-rs-201511" >Rising Stars newsletter&ensp;▸</a>.
+</details>
+<details name="job" class="job"><summary>Master of Art: <mark>Faculty of Graphic Arts at the Academy of Fine Arts in Warsaw</mark></summary>
+I&nbsp;attended classes in: graphic design, typography, let&shy;ter&shy;ing, drawing and painting, photography, printmaking, litho&shy;graphy, theory of perception and visual communi&shy;cation. I&nbsp;received stipend for 10% best students.
+</details>
+  </details>
+</part-drawers>
+
+<part-menu class="menu">
+  <div style="display:flex; margin-right:auto;">
+    <details class="mainMenu" name="mainMenu" id="mainMenu" style="padding: 0px 10px 7px 10px;" onmouseleave="this.removeAttribute('open')" onmouseenter="this.setAttribute('open', 'open')"> <!--NAVIGATION-->
+      <summary>menu </summary>
+
+      <div class="langSelector"><span style="font-size: 16px;">&#9992;</span> 
+        <span class="langSelected">EN</span> 
+        <div style="display:inline;" onmouseenter="document.getElementById('PLNotAvailable').style.display = 'block'" onmouseleave="document.getElementById('PLNotAvailable').style.display = 'none'">PL</div> 
+        <div style="display:inline;" onmouseenter="document.getElementById('FINotAvailable').style.display = 'block'" onmouseleave="document.getElementById('FINotAvailable').style.display = 'none'">FI</div>
+      </div>
+       
+      <div class="modeSelector" id="offButton" onclick="darkMode()"><span style="font-size: 16px; position:relative; top:1px;">&#x262F; </span>lights off</div>
+      <div class="modeSelector" id="onButton" style="display: none;" onclick="lightMode()"><span style="font-size: 16px; position:relative; top:1px;">&#x262F; </span>lights on</div>
+
+      <div class="mouseTip" id="PLNotAvailable">język polski jeszcze<br>niedostępny, przykro mi</div>
+      <div class="mouseTip" id="FINotAvailable">en vielä kääntänyt<br>suomeksi, anteeksi</div>
+     
+
+      <a href="en/main.html" target="mainframe">home page</a><br>
+      <a href="en/blog.html" target="mainframe">blog</a>
+
+      <details open class="menuDrawer"><summary>design & creative</summary>
+        <a class="done" href="en/youngcreatives2.html" target="mainframe">Zwolnieni z Teorii &#x00d7; Żabka</a><br>
+        <a class="wip" href="en/niedoczekanie.html" target="mainframe">Niedoczekanie</a><br>
+        <a class="todo" href="en/mlekpol.html" target="mainframe">Mlekpol / Łaciate</a><br>
+        <a class="todo" href="en/youngcreatives1.html" target="mainframe">Familijne</a><br>
+        <a class="todo" href="en/jazgot.html" target="mainframe">mBank / Jazgot</a><br>
+        <a class="todo" href="en/tuteer.html" target="mainframe">Tuteer</a><br>
+        <a class="todo" href="en/lpid.html" target="mainframe">LPI Development</a><br>
+        <a class="todo" href="en/matkapolka.html" target="mainframe">Matka Polka Catering</a><br>
+        <a class="todo" href="en/okzkid.html" target="mainframe">OKZKID</a><br>
+        <a class="wip" href="en/stereozofia.html" target="mainframe">Stereozofia</a><br>
+      </details>
+
+      <details open class="menuDrawer"><summary>motion design</summary>
+        <a class="todo" href="en/danone.html" target="mainframe">Danone</a><br>
+        <a class="todo" href="en/mbankzabka.html" target="mainframe">mBank &#x00d7; Żabka</a><br>
+        <a class="todo" href="en/mbankyoung.html" target="mainframe">mBank Young</a><br>
+        <a class="todo" href="en/kafcountdown.html" target="mainframe">Krupa Art Foundation</a><br>
+        <a class="todo" href="en/kafyap.html" target="mainframe">KAF Young Art Prize</a><br>
+        <a class="todo" href="en/cas.html" target="mainframe">Centrum Archiwistyki Społecznej</a><br>
+      </details>
+
+      <details open class="menuDrawer"><summary>fonts & type design</summary>
+        <a class="todo" href="en/achtung.html" target="mainframe">Achtung</a><br>
+        <a class="todo" href="en/urlop.html" target="mainframe">Urlop</a><br>
+        <a class="todo" href="en/fushar-ar.html" target="mainframe">Fushar Arabic</a><br>
+        <a class="todo" href="en/fushar.html" target="mainframe">Fushar Latin + DD</a><br>
+        <a class="todo" href="en/ar-blackletter.html" target="mainframe">untitled Arabic blackletter</a><br>
+        <a class="todo" href="en/birkey.html" target="mainframe">Birkey (in progress)</a><br>
+        <a class="external" target="_blank" href="https://www.myfonts.com/collections/miko-aj-grabowski-foundry&pageType=foundryPage">buy my fonts&ensp;▸</a>
+      </details>
+
+      <details open class="menuDrawer"><summary>features and links</summary>
+        <a class="external" href="https://typoteka.pl/pl/designer/mikolaj-grabowski" target="_blank">Typoteka&ensp;▸</a><br>
+        <a class="external" href="https://issuu.com/beczmiana/docs/notes105-internet/192" target="_blank">Bęc Zmiana /&nbsp;NN6T#105&ensp;▸</a><br> 
+        <a class="external" href="https://issuu.com/beczmiana/docs/130_nn6t_elektro/158" target="_blank">Bęc Zmiana /&nbsp;NN6T#130&ensp;▸</a><br> 
+        <a class="external" href="https://www.youworkforthem.com/blog/2021/09/24/achtung-pay-attention-to-mikolaj-grabowski/" target="_blank">YouWorkForThem&ensp;▸</a><br>
+        <a class="external" href="https://www.myfonts.com/pages/newsletters-rs-201511" >Rising Stars newsletter&ensp;▸</a><br>
+      </details>
+
+      <div id="counter" style="margin-top:5px"></div>
+      <script>
+        var done = document.getElementsByClassName("done");
+        var todo = document.getElementsByClassName("todo");
+        var wip = document.getElementsByClassName("wip");
+        var remaining = todo.length + wip.length;
+        document.getElementById("counter").textContent += "remaining ";
+        document.getElementById("counter").textContent += remaining;
+        document.getElementById("counter").textContent += " out of ";
+        var total = done.length + todo.length + wip.length;
+        document.getElementById("counter").textContent += total;
+      </script>
+    </details>
+  </div>
+</part-menu>
+
+
+<script src="index.js"></script>
+
 </body>
 </html>

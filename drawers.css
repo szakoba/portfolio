@@ -1,0 +1,157 @@
+
+.bottomDrawer {
+  padding: 5px 10px 0px 10px; 
+  border: solid var(--FGcolor);
+  background-color: var(--BGcolor);
+  border-width: 1px 1px 0px 1px;
+  margin: 10px;
+  margin-left: 120px;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  max-width: 30em;
+  max-height: 70vh;
+  position:absolute;
+  bottom: 0px;
+  right: 50px;
+  overflow: hidden;
+  summary {padding-bottom: 10px;}
+}
+.bottomDrawer::details-content {
+  content-visibility: visible;
+  overflow: auto;
+}
+.bottomDrawer[open] {
+  height: auto;
+}
+.bottomDrawer:not([open]) {
+  height: 20px;
+}
+
+
+
+.rightDrawer {
+  padding: 3px 0px 3px 7px; 
+  border: solid var(--FGcolor);
+  background-color: var(--BGcolor);
+  border-width: 1px 0px 1px 1px;
+  margin: 10px;
+  margin-top:100px;
+  margin-left:120px;
+  display: flex;
+  width: auto;
+  max-height: 70vh;
+  min-height: 200px;
+  max-width: 33em;
+  position: absolute;
+  right: 0px;
+  bottom: 50px;
+  overflow: hidden;
+  summary {
+    writing-mode: vertical-rl;
+    padding-right: 18px;
+  }
+}
+.rightDrawer::details-content {
+  content-visibility: visible;
+  overflow: auto;
+}
+.rightDrawer[open] {
+  width: auto;
+}
+.rightDrawer:not([open]) {
+  width: 20px;
+}
+
+.leftDrawer {
+  padding: 3px 7px 3px 0px; 
+  border: solid var(--FGcolor);
+  background-color: var(--BGcolor);
+  border-width: 1px 1px 1px 0px;
+  margin: 10px;
+  margin-top:100px;
+  margin-right:120px;
+  display: flex;
+  width: auto;
+  max-height: 70vh;
+  max-width: 33em;
+  min-height: 200px;
+  position: absolute;
+  left: 0px;
+  bottom: 50px;
+  overflow: hidden;
+  summary {
+    writing-mode: vertical-lr;
+    padding-left:5px;
+    background-color: var(--BGcolor);
+  }
+}
+.leftDrawer::details-content {
+  content-visibility: visible;
+  overflow: auto;
+}
+.leftDrawer[open] {
+  width: auto;
+  padding-right:40px;
+  summary {
+    position:absolute;
+    right:5px;
+    padding-left:18px;
+  }
+}
+.leftDrawer:not([open]) {
+  width: 20px;
+  summary {
+    position:static;
+  }
+}
+
+
+.job summary {
+  text-transform: none !important;
+  padding-bottom:5px;
+  padding-top:5px;
+  margin-bottom:0px;
+  text-align:left;
+}
+.job {
+  padding: 1px 10px 0px 10px; 
+  border: solid var(--FGcolor);
+  border-width: 0px 1px 1px 1px;
+  background-color: var(--BGcolor);
+  font-size: 14px; 
+  text-align: justify;
+  text-justify: auto;
+}
+.job[open] {
+  padding-bottom:5px;
+}
+
+
+
+.rightDrawer[open] > summary {
+  list-style-type: '▹ ';
+}
+.rightDrawer[open] > summary:hover {
+  list-style-type: '▸ ';
+}
+.rightDrawer:not([open]) > summary {
+  list-style-type: '▿ ';
+}
+.rightDrawer:not([open]) > summary:hover {
+  list-style-type: '▾ ';
+}
+
+
+.leftDrawer[open] > summary {
+  list-style-type: '▹ ';
+}
+.leftDrawer[open] > summary:hover {
+  list-style-type: '▸ ';
+}
+.leftDrawer:not([open]) > summary {
+  list-style-type: '▿ ';
+}
+.leftDrawer:not([open]) > summary:hover {
+  list-style-type: '▾ ';
+}

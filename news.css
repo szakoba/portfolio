@@ -1,0 +1,26 @@
+.news-container {
+  width: calc(100vw - 30px);
+
+  overflow: hidden;
+  padding: 2.5px 10px;
+  position: absolute;
+  top:8px;
+}
+
+.news-ticker-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+.news-ticker {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 25s linear infinite;
+}
+.news-ticker span {
+  padding: 0 10px;
+}
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

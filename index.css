@@ -1,19 +1,221 @@
-
+:root {
+  --BGcolor: white;
+  --FGcolor: black;
+  --LINKcolor: blue;
+  --DIMcolor: grey;
+  --HIGHcolor: yellow;
+  --HIGH2color: cyan;
+}
 
 body {
-  font-family: 'Work Sans'; font-size: 22px;
+  font-family: 'Work Sans';
+  font-size: 14px;
+  hyphens: manual;
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+  background-color: var(--BGcolor);
+  color: var(--FGcolor);
+  
 }
 
-.work-sans-400 {
-  font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
+p {
+  margin-top: 5px;
+  text-align: justify;
+  text-justify: auto;
+  max-width: 30em;
+}
+
+mark {
+  color: black;
+  background-color: var(--HIGHcolor);
+}
+
+.secondaryMark {
+  color: var(--FGcolor);
+  background-color: var(--HIGH2color);
+}
+
+.pBlock {
+column-width: 30em;
+column-count: 2;
+column-gap: 20px;
+}
+
+h1 {
+  font-family: 'Work Sans'; 
+  font-size: 14px; 
   font-weight: 400;
-  font-style: normal;
+  padding: 0px;
+  margin-top: 100px;
+  text-transform: uppercase; 
+  text-decoration: underline;
 }
 
-.work-sans-200 {
-  font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
+h2 {
+  font-family: 'Work Sans'; 
+  font-size: 14px; 
+  font-weight: 400;
+  padding: 0px;
+  margin-top: 0px;
+  text-align:right;
+}
+
+a {
+  color: var(--FGcolor);
+}
+.external {
+  color: var(--LINKcolor);
+}
+
+.imageBox {
+  display:table;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  img {
+    max-width: 95dvw;
+    max-height: 90dvh;
+    margin:0px;
+    margin-bottom:10px;
+    display: block;
+    width: auto;
+    height: auto;
+  }
+  overflow: hidden;
+  width: fit-content;
+}
+.imageCaption {
+  margin-top: 15px;
+  color: var(--DIMcolor);
+  text-transform: uppercase;
+  font-size: 12px; 
+  font-weight: 450;
+  text-align: left;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  display: table-caption;
+  caption-side: bottom;
+  text-align: justify;
+}
+.imageCarousel {
+  display: inline-flex;
+  max-width: 95dvw;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  img {
+    max-height: 50dvh;
+    margin:0px;
+    margin-right:20px;
+    margin-bottom:0px;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+  img:last-child { 
+    margin-right: 0px !important;
+  }
+  overflow-x: scroll;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+}
+
+img {aspect-ratio: initial;}
+
+.maincontent {
+  display:flex;
+  width: calc(100vw - 200px);
+  height: calc(100vh - 20px);
+  overflow: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,2px);
+  border: none;
+}
+
+.skill {
+ display:inline-block;
+  border: 1px solid var(--FGcolor); 
+  height:1em;
+  border-radius:1em;
+  /*corner-shape: superellipse(1.5);*/
+  padding-left: 3px; 
+  padding-right: 3px;
+  padding-bottom: 2px;
+  margin:0px;
+  font-size: 12px; 
+  font-weight: 450;
+  position: relative;
+  top: -1px;
+} 
+
+details {
+  cursor: pointer;
+}
+::details-content {
+  cursor: auto;
+}
+summary {
+  list-style-type: '▹ ';
+  text-transform: uppercase;
+} 
+
+summary:hover {
+  list-style-type: '▸ ';
+}
+details[open] > summary {
+  list-style-type: '▿ ';
+}
+details[open] > summary:hover {
+  list-style-type: '▾ ';
+}
+
+.mouseTip {
+  display: none;
+  position: fixed;
+  padding: 6px 10px 7px 10px;
+  width: fit-content;
+  height: fit-content;
+  background: var(--FGcolor);
+  color: var(--BGcolor);
+}
+
+.done::before {
+  color:green;
+  content: "● ";
+}
+.todo::before {
+  color:red;
+  content: "● ";
+}
+.wip::before {
+  color:red;
+  content: "WIP ";
+  display:inline-block;
+  border: 1px solid red; 
+  height:1em;
+  border-radius:1em;
+  /*corner-shape: superellipse(1.5);*/
+  padding-left: 3px; 
+  padding-right: 3px;
+  padding-bottom: 2px;
+  margin-right:5px;
+  font-size: 12px; 
+  font-weight: 450;
+}
+
+.todoNote {
+  background-color: red;
+  color: white;
+  padding:20px;
+  max-width:calc(30em - 40px);
+}
+.todoNote:before {
+  content: "WORK IN PROGRESS";
+  display:inline-block;
+  border: 1px solid white; 
+  height:1em;
+  border-radius:1em;
+  /*corner-shape: superellipse(1.5);*/
+  padding-left: 3px; 
+  padding-right: 3px;
+  padding-bottom: 2px;
+  margin-right:5px;
 }

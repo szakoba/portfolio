@@ -1,0 +1,75 @@
+.menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.menu details {
+  padding: 5px 10px 5px 10px; 
+  border: solid var(--FGcolor);
+  border-width: 0px 1px 1px 1px;
+  background-color: var(--BGcolor);
+  font-size: 14px; 
+  button {
+    background: none;
+    border: none;
+    margin:2px; margin-left:8px;
+    font-family: 'Work Sans';
+    font-size: 14px;
+    display: block;
+    cursor: alias;
+  }
+}
+
+.menuDrawer summary {
+  margin-bottom: 0px;
+  text-align: left;
+}
+.menuDrawer {
+  padding: 1px 10px 0px 10px; 
+  border: solid var(--FGcolor);
+  border-width: 0px 1px 1px 1px;
+  background-color: var(--BGcolor);
+  font-size: 14px; 
+  text-align: justify;
+  text-justify: auto;
+}
+.menuDrawer[open] {
+  padding-bottom:10px;
+}
+
+.langSelector {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  border: 1px solid var(--LINKcolor); 
+  color: var(--LINKcolor);
+  height: 14px;
+  border-radius: 1em;
+  /*corner-shape: superellipse(1.5);*/
+  padding: 0px 6px 6px 5px;
+  width:85px;
+  text-align: justify;
+  text-align-last: justify;
+}
+.langSelected {
+  border-radius: 1em;
+  /*corner-shape: superellipse(1.5);*/
+  background: var(--HIGH2color);
+  border: solid var(--HIGH2color);
+  color: var(--FGcolor);
+}
+
+.modeSelector {
+  display:block;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  border: 1px solid var(--LINKcolor); 
+  color: var(--LINKcolor);
+  height: 14px;
+  border-radius: 1em;
+  /*corner-shape: superellipse(1.5);*/
+  padding: 0px 6px 6px 5px;
+  width:85px;
+}
