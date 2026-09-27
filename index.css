@@ -123,6 +123,7 @@ img {aspect-ratio: initial;}
   display:flex;
   width: calc(100vw - 200px);
   height: calc(100vh - 20px);
+  max-width: 65em;
   overflow: auto;
   position: absolute;
   left: 50%;
