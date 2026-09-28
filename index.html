@@ -14,10 +14,7 @@
 
 <body>
 
-
-
 <iframe src="en/main.html" class="maincontent" name="mainframe" title="mainframe" id="mainframe"></iframe>
-
 
 <part-newsbar>
   <div class="news-container">
@@ -143,16 +140,16 @@ I&nbsp;attended classes in: graphic design, typography, let&shy;ter&shy;ing, dra
       <a href="en/blog.html" target="mainframe">blog</a>
 
       <details open class="menuDrawer"><summary>design & creative</summary>
-        <a class="done" href="en/youngcreatives2.html" target="mainframe">Zwolnieni z Teorii &#x00d7; Żabka</a><br>
+        <a class="done" href="en/youngcreatives2.html" target="mainframe" onclick="pageSelected()">Zwolnieni z Teorii &#x00d7; Żabka</a><br>
         <a class="wip" href="en/niedoczekanie.html" target="mainframe">Niedoczekanie</a><br>
         <a class="todo" href="en/mlekpol.html" target="mainframe">Mlekpol / Łaciate</a><br>
         <a class="todo" href="en/youngcreatives1.html" target="mainframe">Familijne</a><br>
         <a class="todo" href="en/jazgot.html" target="mainframe">mBank / Jazgot</a><br>
-        <a class="todo" href="en/tuteer.html" target="mainframe">Tuteer</a><br>
-        <a class="todo" href="en/lpid.html" target="mainframe">LPI Development</a><br>
+        <a class="done" href="en/tuteer.html" target="mainframe">Tuteer</a><br>
+        <a class="done" href="en/lpid.html" target="mainframe">LPI Development</a><br>
         <a class="todo" href="en/matkapolka.html" target="mainframe">Matka Polka Catering</a><br>
-        <a class="todo" href="en/okzkid.html" target="mainframe">OKZKID</a><br>
-        <a class="wip" href="en/stereozofia.html" target="mainframe">Stereozofia</a><br>
+        <a class="done" href="en/okzkid.html" target="mainframe">OKZKID</a><br>
+        <a class="done" href="en/stereozofia.html" target="mainframe">Stereozofia</a><br>
       </details>
 
       <details open class="menuDrawer"><summary>motion design</summary>
@@ -193,7 +190,11 @@ I&nbsp;attended classes in: graphic design, typography, let&shy;ter&shy;ing, dra
         document.getElementById("counter").textContent += " out of ";
         var total = done.length + todo.length + wip.length;
         document.getElementById("counter").textContent += total;
+
+
+
       </script>
+
     </details>
   </div>
 </part-menu>

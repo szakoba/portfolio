@@ -66,6 +66,10 @@ a {
 .external {
   color: var(--LINKcolor);
 }
+a:hover {
+  text-decoration-thickness: 2px;
+  font-weight: 600;
+}
 
 .imageBox {
   display:table;
@@ -82,6 +86,7 @@ a {
   }
   overflow: hidden;
   width: fit-content;
+  .lightsOff {display: none;}
 }
 .imageCaption {
   margin-top: 15px;
@@ -116,14 +121,34 @@ a {
   overflow-y: visible;
   scroll-snap-type: x mandatory;
 }
+.imageCarouselStatic {
+  display:table;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  img {
+    max-width: 30dvw;
+    max-height: 30dvw;
+    margin:0px;
+    display: inline;
+    width: auto;
+    height: auto;
+  }
+  overflow:auto;
+  .lightsOff {display: none;}
+  .imageCaption {display: table-row;
+  column-span: all;}
+}
 
 img {aspect-ratio: initial;}
+
+
 
 .maincontent {
   display:flex;
   width: calc(100vw - 200px);
   height: calc(100vh - 20px);
   max-width: 65em;
+  min-width: 20em;
   overflow: auto;
   position: absolute;
   left: 50%;
@@ -160,12 +185,14 @@ summary {
 
 summary:hover {
   list-style-type: '▸ ';
+  font-weight: 600;
 }
 details[open] > summary {
   list-style-type: '▿ ';
 }
 details[open] > summary:hover {
   list-style-type: '▾ ';
+  font-weight: 600;
 }
 
 .mouseTip {
@@ -178,10 +205,10 @@ details[open] > summary:hover {
   color: var(--BGcolor);
 }
 
-.done::before {
+/*.done::before {
   color:green;
   content: "● ";
-}
+}*/
 .todo::before {
   color:red;
   content: "● ";

@@ -52,6 +52,9 @@
   text-align: justify;
   text-align-last: justify;
 }
+.langSelector:hover {
+  font-weight: 600;
+}
 .langSelected {
   border-radius: 1em;
   /*corner-shape: superellipse(1.5);*/
@@ -72,4 +75,7 @@
   /*corner-shape: superellipse(1.5);*/
   padding: 0px 6px 6px 5px;
   width:85px;
+}
+.modeSelector:hover {
+  font-weight: 600;
 }

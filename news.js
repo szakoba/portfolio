@@ -1,9 +1,14 @@
 let siteTitle = document.getElementById("mainframe").title;
 
 const newsList = [
-  "MIKOŁAJ KONRAD GRABOWSKI",
+  "Mikołaj Grabowski",
   "graphic designer",
-  document.getElementById("mainframe").getElementsByTagName("title").innerHTML,
+  "welcome! :)",
+  "Mikołaj Grabowski",
+  "graphic designer",
+  "welcome! :)",
+  "Mikołaj Grabowski",
+  "graphic designer",
   "welcome! :)",
 ];
 
