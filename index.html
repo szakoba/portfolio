@@ -14,7 +14,9 @@
 
 <body>
 
+<div class="contentScrollArea">
 <iframe src="en/main.html" class="maincontent" name="mainframe" title="mainframe" id="mainframe"></iframe>
+</div>
 
 <part-newsbar>
   <div class="news-container">
@@ -125,49 +127,49 @@ I&nbsp;attended classes in: graphic design, typography, let&shy;ter&shy;ing, dra
 
       <div class="langSelector"><span style="font-size: 16px;">&#9992;</span> 
         <span class="langSelected">EN</span> 
-        <div style="display:inline;" onmouseenter="document.getElementById('PLNotAvailable').style.display = 'block'" onmouseleave="document.getElementById('PLNotAvailable').style.display = 'none'">PL</div> 
-        <div style="display:inline;" onmouseenter="document.getElementById('FINotAvailable').style.display = 'block'" onmouseleave="document.getElementById('FINotAvailable').style.display = 'none'">FI</div>
+        <div style="display:inline;" 
+        onmouseenter="showComment('język polski jeszcze<br>niedostępny, przykro mi')" 
+        onmouseleave="document.getElementById('mouseComment').style.display = 'none'">PL</div> 
+        <div style="display:inline;" 
+        onmouseenter="showComment('en vielä kääntänyt<br>suomeksi, anteeksi')"
+        onmouseleave="document.getElementById('mouseComment').style.display = 'none'">FI</div>
       </div>
        
       <div class="modeSelector" id="offButton" onclick="darkMode()"><span style="font-size: 16px; position:relative; top:1px;">&#x262F; </span>lights off</div>
       <div class="modeSelector" id="onButton" style="display: none;" onclick="lightMode()"><span style="font-size: 16px; position:relative; top:1px;">&#x262F; </span>lights on</div>
-
-      <div class="mouseTip" id="PLNotAvailable">język polski jeszcze<br>niedostępny, przykro mi</div>
-      <div class="mouseTip" id="FINotAvailable">en vielä kääntänyt<br>suomeksi, anteeksi</div>
-     
 
       <a href="en/main.html" target="mainframe">home page</a><br>
       <a href="en/blog.html" target="mainframe">blog</a>
 
       <details open class="menuDrawer"><summary>design & creative</summary>
         <a class="done" href="en/youngcreatives2.html" target="mainframe" onclick="pageSelected()">Zwolnieni z Teorii &#x00d7; Żabka</a><br>
-        <a class="wip" href="en/niedoczekanie.html" target="mainframe">Niedoczekanie</a><br>
-        <a class="todo" href="en/mlekpol.html" target="mainframe">Mlekpol / Łaciate</a><br>
-        <a class="todo" href="en/youngcreatives1.html" target="mainframe">Familijne</a><br>
-        <a class="todo" href="en/jazgot.html" target="mainframe">mBank / Jazgot</a><br>
-        <a class="done" href="en/tuteer.html" target="mainframe">Tuteer</a><br>
-        <a class="done" href="en/lpid.html" target="mainframe">LPI Development</a><br>
-        <a class="todo" href="en/matkapolka.html" target="mainframe">Matka Polka Catering</a><br>
-        <a class="done" href="en/okzkid.html" target="mainframe">OKZKID</a><br>
-        <a class="done" href="en/stereozofia.html" target="mainframe">Stereozofia</a><br>
+        <a class="wip" href="en/niedoczekanie.html" target="mainframe" onclick="pageSelected()">Niedoczekanie</a><br>
+        <a class="todo" href="en/mlekpol.html" target="mainframe" onclick="pageSelected()">Mlekpol / Łaciate</a><br>
+        <a class="wip" href="en/youngcreatives1.html" target="mainframe" onclick="pageSelected()">Familijne</a><br>
+        <a class="todo" href="en/jazgot.html" target="mainframe" onclick="pageSelected()">mBank / Jazgot</a><br>
+        <a class="done" href="en/tuteer.html" target="mainframe" onclick="pageSelected()">Tuteer</a><br>
+        <a class="done" href="en/lpid.html" target="mainframe" onclick="pageSelected()">LPI Development</a><br>
+        <a class="wip" href="en/matkapolka.html" target="mainframe" onclick="pageSelected()">Matka Polka Catering</a><br>
+        <a class="done" href="en/okzkid.html" target="mainframe" onclick="pageSelected()">OKZKID</a><br>
+        <a class="done" href="en/stereozofia.html" target="mainframe" onclick="pageSelected()">Stereozofia</a><br>
       </details>
 
       <details open class="menuDrawer"><summary>motion design</summary>
-        <a class="todo" href="en/danone.html" target="mainframe">Danone</a><br>
-        <a class="todo" href="en/mbankzabka.html" target="mainframe">mBank &#x00d7; Żabka</a><br>
-        <a class="todo" href="en/mbankyoung.html" target="mainframe">mBank Young</a><br>
-        <a class="todo" href="en/kafcountdown.html" target="mainframe">Krupa Art Foundation</a><br>
-        <a class="todo" href="en/kafyap.html" target="mainframe">KAF Young Art Prize</a><br>
-        <a class="todo" href="en/cas.html" target="mainframe">Centrum Archiwistyki Społecznej</a><br>
+        <a class="todo" href="en/danone.html" target="mainframe" onclick="pageSelected()">Danone</a><br>
+        <a class="todo" href="en/mbankzabka.html" target="mainframe" onclick="pageSelected()">mBank &#x00d7; Żabka</a><br>
+        <a class="todo" href="en/mbankyoung.html" target="mainframe" onclick="pageSelected()">mBank Young</a><br>
+        <a class="todo" href="en/kafcountdown.html" target="mainframe" onclick="pageSelected()">Krupa Art Foundation</a><br>
+        <a class="todo" href="en/kafyap.html" target="mainframe" onclick="pageSelected()">KAF Young Art Prize</a><br>
+        <a class="todo" href="en/cas.html" target="mainframe" onclick="pageSelected()">Centrum Archiwistyki Społecznej</a><br>
       </details>
 
       <details open class="menuDrawer"><summary>fonts & type design</summary>
-        <a class="todo" href="en/achtung.html" target="mainframe">Achtung</a><br>
-        <a class="todo" href="en/urlop.html" target="mainframe">Urlop</a><br>
-        <a class="todo" href="en/fushar-ar.html" target="mainframe">Fushar Arabic</a><br>
-        <a class="todo" href="en/fushar.html" target="mainframe">Fushar Latin + DD</a><br>
-        <a class="todo" href="en/ar-blackletter.html" target="mainframe">untitled Arabic blackletter</a><br>
-        <a class="todo" href="en/birkey.html" target="mainframe">Birkey (in progress)</a><br>
+        <a class="todo" href="en/achtung.html" target="mainframe" onclick="pageSelected()">Achtung</a><br>
+        <a class="todo" href="en/urlop.html" target="mainframe" onclick="pageSelected()">Urlop</a><br>
+        <a class="todo" href="en/fushar-ar.html" target="mainframe" onclick="pageSelected()">Fushar Arabic</a><br>
+        <a class="todo" href="en/fushar.html" target="mainframe" onclick="pageSelected()">Fushar Latin + DD</a><br>
+        <a class="todo" href="en/ar-blackletter.html" target="mainframe" onclick="pageSelected()">untitled Arabic blackletter</a><br>
+        <a class="todo" href="en/birkey.html" target="mainframe" onclick="pageSelected()">Birkey (in progress)</a><br>
         <a class="external" target="_blank" href="https://www.myfonts.com/collections/miko-aj-grabowski-foundry&pageType=foundryPage">buy my fonts&ensp;▸</a>
       </details>
 

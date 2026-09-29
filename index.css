@@ -73,8 +73,8 @@ a:hover {
 
 .imageBox {
   display:table;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 70px;
+  margin-bottom: 50px;
   img {
     max-width: 95dvw;
     max-height: 90dvh;
@@ -100,6 +100,8 @@ a:hover {
   display: table-caption;
   caption-side: bottom;
   text-align: justify;
+  position: relative;
+  transform: translate(0,-15px);
 }
 .imageCarousel {
   display: inline-flex;
@@ -138,10 +140,28 @@ a:hover {
   .imageCaption {display: table-row;
   column-span: all;}
 }
-
-img {aspect-ratio: initial;}
-
-
+img {aspect-ratio: initial;
+max-width: 95dvw;
+    max-height: 90dvh;
+    margin:0px;
+    margin-bottom:10px;
+    display: block;
+    width: auto;
+    height: auto;}
+.after {
+  position: absolute;
+  transform: translate(0,calc(-100% - 10px));
+  animation-name: fadeLoop;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+}
+@keyframes fadeLoop {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
 
 .maincontent {
   display:flex;

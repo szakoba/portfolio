@@ -1,12 +1,19 @@
-const comment1 = document.getElementById("PLNotAvailable");
-const comment2 = document.getElementById("FINotAvailable");
-document.body.onpointermove = event => {
+var container = document.createElement('div');
+var containerClass = document.createAttribute("class");
+containerClass.value = "mouseTip";
+container.setAttributeNode(containerClass);
+var containerId = document.createAttribute("id");
+containerId.value = "mouseComment";
+container.setAttributeNode(containerId);
+document.body.appendChild(container);
+function showComment (comment) {
+  document.getElementById('mouseComment').style.display = 'block';
+  document.getElementById('mouseComment').innerHTML = comment;
+}
+const comment1 = document.getElementById("mouseComment");
+document.onpointermove = event => {
     const { clientX, clientY } = event;
     comment1.animate({
-        left: `${clientX + 10}px`,
-        top: `${clientY + 10}px`
-    }, {duration: 0, fill: "forwards"})
-    comment2.animate({
         left: `${clientX + 10}px`,
         top: `${clientY + 10}px`
     }, {duration: 0, fill: "forwards"})
