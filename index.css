@@ -15,8 +15,8 @@ body {
   user-select: none;
   background-color: var(--BGcolor);
   color: var(--FGcolor);
-  
 }
+
 
 p {
   margin-top: 5px;
@@ -164,24 +164,22 @@ max-width: 95dvw;
 }
 
 .maincontent {
-  display:flex;
   width: calc(100vw - 200px);
   height: calc(100vh - 20px);
   max-width: 65em;
   min-width: 20em;
-  overflow: auto;
   position: absolute;
   left: 50%;
   transform: translate(-50%,2px);
   border: none;
 }
 
+
 .skill {
  display:inline-block;
   border: 1px solid var(--FGcolor); 
   height:1em;
   border-radius:1em;
-  /*corner-shape: superellipse(1.5);*/
   padding-left: 3px; 
   padding-right: 3px;
   padding-bottom: 2px;

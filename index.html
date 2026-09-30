@@ -14,9 +14,26 @@
 
 <body>
 
-<div class="contentScrollArea">
-<iframe src="en/main.html" class="maincontent" name="mainframe" title="mainframe" id="mainframe"></iframe>
-</div>
+  
+  <iframe
+    src="en/main.html"
+    class="maincontent"
+    name="mainframe"
+    id="mainframe">
+  </iframe>
+  
+  <script>
+    const iframe = document.getElementById('mainframe');
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      window.addEventListener('wheel', event => {
+        const rect = iframe.getBoundingClientRect();
+        if (event.clientX < rect.left || event.clientX > rect.right) {
+          iframe.contentWindow.scrollBy(0, event.deltaY);
+          event.preventDefault();
+        }
+      }, { passive: false });
+    }
+  </script>
 
 <part-newsbar>
   <div class="news-container">
@@ -29,10 +46,19 @@
 
 <part-drawers>
   <details name="drawer" class="leftDrawer"><summary>contact options </summary>
-  <p>email address<br>mikolaj.grabowski[at]icloud.com</p>
-  <p>instagram<br>@szakoba2</p>
-  <p>discogs here</p>
-  <p>download my portfolio PDF here</p>
+  <p style="max-width:17em;">Feel free to send me an email at <mark>mikolaj.grabowski[at]icloud.com</mark>.</p>
+  
+  <p style="max-width:17em;">You can follow me on 
+  <a href="https://www.instagram.com/szakoba2/" target="_blank" class="external">insta&shy;gram&ensp;▸</a>, but I'm not the most
+  ac&shy;tive there nowa&shy;days.</p>
+
+  <p style="max-width:17em;">We can do some networking on  
+  <a href="https://www.linkedin.com/in/mikolaj-grabowski/" target="_blank" class="external">linkedin&ensp;▸</a>, if that's
+  your thing.</p>
+
+  <p style="max-width:17em;">I certainly do have a mobile pho&shy;ne, but I prefer not to my number
+  here. If you like calling I can pro&shy;vide you with my number.</p>
+
   </details>
   <details name="drawer" class="rightDrawer"><summary>about me </summary>
     <p><mark>LONG STORY SHORT</mark> I was born in 1996 in Warsaw, Poland, which places me on the threshold
