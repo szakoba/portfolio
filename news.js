@@ -1,4 +1,4 @@
-let siteTitle = document.getElementById("mainframe").title;
+
 
 const newsList = [
   "Mikołaj Grabowski",

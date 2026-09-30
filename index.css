@@ -173,6 +173,19 @@ max-width: 95dvw;
   transform: translate(-50%,2px);
   border: none;
 }
+/*iframe {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}*/
 
 
 .skill {

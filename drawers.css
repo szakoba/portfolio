@@ -10,7 +10,7 @@
   flex-direction: column;
   width: auto;
   max-width: 30em;
-  max-height: 70vh;
+  max-height: calc(100dvh - 70px);
   position:absolute;
   bottom: 0px;
   right: 50px;

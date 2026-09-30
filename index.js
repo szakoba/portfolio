@@ -22,11 +22,29 @@ document.onpointermove = event => {
 let details = document.querySelectorAll("details");
 function pageSelected () {
   details.forEach((detail) => {
-    if (detail.className == "mainMenu") {
+    if (detail.className == "mainMenu"
+        || detail.className == "leftDrawer"
+        || detail.className == "rightDrawer"
+        || detail.className == "bottomDrawer") {
       detail.removeAttribute("open");
     }
   });
 }
+
+/*let allTodo = document.querySelectorAll("a");
+function tellTodo () {
+  allTodo.forEach((oneTodo) => {
+    if (oneTodo.className == "todo") {
+      oneTodo.addEventListener('mouseenter', showComment('page in progress'))
+      oneTodo.addEventListener('mouseleave', document.getElementById('mouseComment').style.display = 'none')
+    } else if (oneTodo.className == "wip") {
+      oneTodo.addEventListener('mouseenter', showComment('page in progress'))
+      oneTodo.addEventListener('mouseleave', document.getElementById('mouseComment').style.display = 'none')
+    }
+  });
+}
+tellTodo();*/
+
 
 function darkMode() {
   document.body.style.setProperty('--FGcolor','white');

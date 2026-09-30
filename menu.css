@@ -1,13 +1,14 @@
 .menu {
   position: absolute;
-  top: 10px;
+  top: 0px;
   left: 10px;
 }
 
 .menu details {
   padding: 5px 10px 5px 10px; 
-  border: solid var(--FGcolor);
-  border-width: 0px 1px 1px 1px;
+  border: solid;
+  border-color: var(--FGcolor);
+  border-width: 10px 1px 1px 1px;
   background-color: var(--BGcolor);
   font-size: 14px; 
   button {
@@ -27,8 +28,8 @@
 }
 .menuDrawer {
   padding: 1px 10px 0px 10px; 
-  border: solid var(--FGcolor);
-  border-width: 0px 1px 1px 1px;
+  border: solid var(--FGcolor) !important;
+  border-width: 0px 1px 1px 1px !important;
   background-color: var(--BGcolor);
   font-size: 14px; 
   text-align: justify;
@@ -40,7 +41,7 @@
 
 .langSelector {
   position: absolute;
-  top: 0px;
+  top: 10px;
   right: 10px;
   border: 1px solid var(--LINKcolor); 
   color: var(--LINKcolor);
@@ -67,7 +68,7 @@
 .modeSelector {
   display:block;
   position: absolute;
-  top: 25px;
+  top: 35px;
   right: 10px;
   border: 1px solid var(--LINKcolor); 
   color: var(--LINKcolor);
