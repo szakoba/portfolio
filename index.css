@@ -15,6 +15,7 @@ body {
   user-select: none;
   background-color: var(--BGcolor);
   color: var(--FGcolor);
+  font-variant-emoji: text;
 }
 
 
