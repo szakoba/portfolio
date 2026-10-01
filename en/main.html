@@ -15,12 +15,36 @@
 <body>
 <script src="../index.js"></script>
 
-  
+
+
 
 <h1>Hello</h1>
-  <p>Welcome to my website. You will find a lot of different stuff here. I'm eager for your creative brief!</p>
+  <p>Welcome to my website. You will find a lot of different stuff here.
+    That's me on the pic below waiting eager for your creative brief! </p>
+
+<p>You can choose a project from the menu above or let the randomiser <a id="surprise" href="main.html">surprise you!</a></p>
+<script>
+  function getRandomUrl(urls) {
+    var minIndex = 0;
+    var maxIndex = urls.length - 1;
+    var randomIndex = Math.floor(Math.random() * (maxIndex - minIndex)) + minIndex;
+    /*return urls[randomIndex];*/
+    document.getElementById("surprise").href = urls[randomIndex];
+  }
+  var urls = [
+    "lpid.html",
+    "matkapolka.html",
+    "niedoczekanie.html",
+    "okzkid.html",
+    "stereozofia.html",
+    "tuteer.html",
+    "youngcreatives1.html",
+    "youngreatives2.html"
+  ];
+  getRandomUrl(urls);
+</script>
 <div class="imageBox">
   <img src="../img/IMG_2099_Large.jpg">
-  <p class="imageCaption" onload="widthLimiter()">photo by Klaudia Adamek</p>
+  <p class="imageCaption">photo by Klaudia Adamek</p>
 </div> 
 </body>
