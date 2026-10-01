@@ -1,7 +1,12 @@
 .menu {
   position: absolute;
   top: 0px;
-  left: 10px;
+  left: 50px;
+}
+@media (max-width: 622px) {
+  .menu {
+    left: 10px;
+  }
 }
 
 .menu details {
@@ -92,3 +97,32 @@
     display: inline;
   }
 }
+
+.mainMenu[open] {
+  min-width:270px;
+  max-height: calc(100dvh - 20px);
+  overflow: hidden;
+}
+@media (max-width: 622px) {
+  .mainMenu[open] {
+    width: calc(100dvw - 40px);
+  }
+}
+
+#linkA01:hover {color: rgb(130,251,111)}
+#linkA02:hover {color: rgb(148,125,89)}
+#linkA03:hover {color: lightblue}
+#linkA04:hover {color: rgb(245,201,81)}
+#linkA05:hover {color: red}
+#linkA06:hover {color: rgb(111,99,166)}
+#linkA07:hover {color: orangered}
+#linkA08:hover {color: rgb(181,66,40)}
+#linkA09:hover {color: rgb(78,171,172)}
+#linkA10:hover {color: black}
+
+#linkB01:hover {color: rgb(14, 203, 255)}
+#linkB02:hover {color: rgb(130,251,111)}
+#linkB03:hover {color: rgb(255,0,255)}
+#linkB04:hover {color: black}
+#linkB05:hover {color: orange}
+#linkB06:hover {color: salmon}

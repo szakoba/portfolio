@@ -44,7 +44,7 @@
   </part-newsbar>
 
   <part-drawers>
-    <details name="drawer" class="leftDrawer"><summary>contact options </summary>
+    <details name="mainMenu" class="leftDrawer"><summary>contact options </summary>
     <p style="max-width:17em;">Feel free to send me an email at <mark>mikolaj.grabowski[at]icloud.com</mark>.</p>
     
     <p style="max-width:17em;">You can follow me on 
@@ -189,46 +189,50 @@
         
         <div class="modeSelector" id="offButton" onclick="darkMode()"><span style="font-size: 16px; position:relative; top:1px;">&#x262F; </span>lights off</div>
         <div class="modeSelector" id="onButton" style="display: none;" onclick="lightMode()"><span style="font-size: 16px; position:relative; top:1px;">&#x262F; </span>lights on</div>
-
-        <a href="en/main.html" target="mainframe">HOME PAGE</a><br>
-        <a class="mobileOnly" href="en/aboutme.html" target="mainframe">ABOUT ME<br></a>
-        <a href="en/blog.html" target="mainframe">BLOG</a>
-        <a class="mobileOnly" href="en/resume.html" target="mainframe"><br>RESUMÉ / CV<br></a>
-        <a class="mobileOnly" href="en/contactme.html" target="mainframe">CONTACT OPTIONS</a>        
-
-        <details open class="menuDrawer"><summary>design & creative</summary>
-          <a class="done" href="en/youngcreatives2.html" target="mainframe" onclick="pageSelected()">Zwolnieni z Teorii &#x00d7; Żabka</a><br>
-          <a class="wip" href="en/niedoczekanie.html" target="mainframe" onclick="pageSelected()">Niedoczekanie</a><br>
-          <a class="todo" href="en/mlekpol.html" target="mainframe" onclick="pageSelected()">Mlekpol / Łaciate</a><br>
-          <a class="done" href="en/youngcreatives1.html" target="mainframe" onclick="pageSelected()">Familijne</a><br>
-          <a class="todo" href="en/jazgot.html" target="mainframe" onclick="pageSelected()">mBank / Jazgot</a><br>
-          <a class="done" href="en/tuteer.html" target="mainframe" onclick="pageSelected()">Tuteer</a><br>
-          <a class="done" href="en/lpid.html" target="mainframe" onclick="pageSelected()">LPI Development</a><br>
-          <a class="wip" href="en/matkapolka.html" target="mainframe" onclick="pageSelected()">Matka Polka Catering</a><br>
-          <a class="done" href="en/okzkid.html" target="mainframe" onclick="pageSelected()">OKZKID</a><br>
-          <a class="done" href="en/stereozofia.html" target="mainframe" onclick="pageSelected()">Stereozofia</a><br>
+        <span style="line-height: 1.5em;">
+          <a href="en/main.html" target="mainframe">HOME PAGE</a>
+          <a class="mobileOnly" href="en/aboutme.html" target="mainframe"><br>ABOUT ME</a>
+          <a href="en/blog.html" target="mainframe"><br>BLOG</a>
+          <a class="mobileOnly" href="en/resume.html" target="mainframe"><br>RESUMÉ / CV</a>
+          <a class="mobileOnly" href="en/contactme.html" target="mainframe"><br>CONTACT OPTIONS</a>        
+        </span>
+        <details class="menuDrawer" style="padding-top: 2px;"><summary>design & creative</summary>
+          <div style="height:4px; width:100%"></div>
+          <a id="linkA01" class="done" href="en/youngcreatives2.html" target="mainframe" onclick="pageSelected()">Zwolnieni z Teorii &#x00d7; Żabka</a><br>
+          <a id="linkA02" class="wip" href="en/niedoczekanie.html" target="mainframe" onclick="pageSelected()">Niedoczekanie</a><br>
+          <a id="linkA03" class="todo" href="en/mlekpol.html" target="mainframe" onclick="pageSelected()">Mlekpol / Łaciate</a><br>
+          <a id="linkA04" class="done" href="en/youngcreatives1.html" target="mainframe" onclick="pageSelected()">Familijne</a><br>
+          <a id="linkA05" class="todo" href="en/jazgot.html" target="mainframe" onclick="pageSelected()">mBank / Jazgot</a><br>
+          <a id="linkA06" class="done" href="en/tuteer.html" target="mainframe" onclick="pageSelected()">Tuteer</a><br>
+          <a id="linkA07" class="done" href="en/lpid.html" target="mainframe" onclick="pageSelected()">LPI Development</a><br>
+          <a id="linkA08" class="done" href="en/matkapolka.html" target="mainframe" onclick="pageSelected()">Matka Polka Catering</a><br>
+          <a id="linkA09" class="done" href="en/okzkid.html" target="mainframe" onclick="pageSelected()">OKZKID</a><br>
+          <a id="linkA10" class="done" href="en/stereozofia.html" target="mainframe" onclick="pageSelected()">Stereozofia</a><br>
         </details>
 
-        <details open class="menuDrawer"><summary>motion design</summary>
-          <a class="todo" href="en/danone.html" target="mainframe" onclick="pageSelected()">Danone</a><br>
-          <a class="todo" href="en/mbankzabka.html" target="mainframe" onclick="pageSelected()">mBank &#x00d7; Żabka</a><br>
-          <a class="todo" href="en/mbankyoung.html" target="mainframe" onclick="pageSelected()">mBank Young</a><br>
-          <a class="todo" href="en/kafcountdown.html" target="mainframe" onclick="pageSelected()">Krupa Art Foundation</a><br>
-          <a class="todo" href="en/kafyap.html" target="mainframe" onclick="pageSelected()">KAF Young Art Prize</a><br>
-          <a class="todo" href="en/cas.html" target="mainframe" onclick="pageSelected()">Centrum Archiwistyki Społecznej</a><br>
+        <details class="menuDrawer"><summary>motion design</summary>
+          <div style="height:4px; width:100%"></div>
+          <a id="linkB01" class="todo" href="en/danone.html" target="mainframe" onclick="pageSelected()">Danone</a><br>
+          <a id="linkB02" class="todo" href="en/mbankzabka.html" target="mainframe" onclick="pageSelected()">mBank &#x00d7; Żabka</a><br>
+          <a id="linkB03" class="todo" href="en/mbankyoung.html" target="mainframe" onclick="pageSelected()">mBank Young</a><br>
+          <a id="linkB04" class="todo" href="en/kafcountdown.html" target="mainframe" onclick="pageSelected()">Krupa Art Foundation</a><br>
+          <a id="linkB05" class="todo" href="en/kafyap.html" target="mainframe" onclick="pageSelected()">KAF Young Art Prize</a><br>
+          <a id="linkB06" class="todo" href="en/cas.html" target="mainframe" onclick="pageSelected()">Centrum Archiwistyki Społecznej</a><br>
         </details>
 
-        <details open class="menuDrawer"><summary>fonts & type design</summary>
-          <a class="todo" href="en/achtung.html" target="mainframe" onclick="pageSelected()">Achtung</a><br>
-          <a class="todo" href="en/urlop.html" target="mainframe" onclick="pageSelected()">Urlop</a><br>
-          <a class="todo" href="en/fushar-ar.html" target="mainframe" onclick="pageSelected()">Fushar Arabic</a><br>
-          <a class="todo" href="en/fushar.html" target="mainframe" onclick="pageSelected()">Fushar Latin + DD</a><br>
-          <a class="todo" href="en/ar-blackletter.html" target="mainframe" onclick="pageSelected()">untitled Arabic blackletter</a><br>
-          <a class="todo" href="en/birkey.html" target="mainframe" onclick="pageSelected()">Birkey (in progress)</a><br>
-          <a class="external" target="_blank" href="https://www.myfonts.com/collections/miko-aj-grabowski-foundry&pageType=foundryPage">buy my fonts&ensp;▸</a>
+        <details class="menuDrawer"><summary>fonts & type design</summary>
+          <div style="height:4px; width:100%"></div>
+          <a id="linkC01" class="todo" href="en/achtung.html" target="mainframe" onclick="pageSelected()">Achtung</a><br>
+          <a id="linkC02" class="todo" href="en/urlop.html" target="mainframe" onclick="pageSelected()">Urlop</a><br>
+          <a id="linkC03" class="todo" href="en/fushar-ar.html" target="mainframe" onclick="pageSelected()">Fushar Arabic</a><br>
+          <a id="linkC04" class="todo" href="en/fushar.html" target="mainframe" onclick="pageSelected()">Fushar Latin + DD</a><br>
+          <a id="linkC05" class="todo" href="en/ar-blackletter.html" target="mainframe" onclick="pageSelected()">untitled Arabic blackletter</a><br>
+          <a id="linkC06" class="todo" href="en/birkey.html" target="mainframe" onclick="pageSelected()">Birkey (in progress)</a><br>
+          <a id="linkC07" class="external" target="_blank" href="https://www.myfonts.com/collections/miko-aj-grabowski-foundry&pageType=foundryPage">buy my fonts&ensp;▸</a>
         </details>
 
-        <details open class="menuDrawer"><summary>features and links</summary>
+        <details class="menuDrawer"><summary>features & links</summary>
+          <div style="height:4px; width:100%"></div>
           <a class="external" href="https://typoteka.pl/pl/designer/mikolaj-grabowski" target="_blank">Typoteka&ensp;▸</a><br>
           <a class="external" href="https://issuu.com/beczmiana/docs/notes105-internet/192" target="_blank">Bęc Zmiana /&nbsp;NN6T#105&ensp;▸</a><br> 
           <a class="external" href="https://issuu.com/beczmiana/docs/130_nn6t_elektro/158" target="_blank">Bęc Zmiana /&nbsp;NN6T#130&ensp;▸</a><br> 

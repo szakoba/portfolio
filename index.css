@@ -25,6 +25,14 @@ p {
   text-justify: auto;
   max-width: 30em;
 }
+@media (max-width: 622px) {
+  p {
+    margin-top: 5px;
+    text-align: justify;
+    text-justify: auto;
+    max-width: 622px;
+  }
+}
 
 mark {
   color: black;
