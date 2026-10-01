@@ -17,9 +17,9 @@
   overflow: hidden;
   summary {padding-bottom: 10px;}
 }
-@media (max-width: 622px) {
+/*@media (max-width: 622px) {
   .bottomDrawer{min-width: calc(100dvw - 144px);}
-}
+}*/
 .bottomDrawer::details-content {
   content-visibility: visible;
   overflow: auto;
@@ -30,7 +30,6 @@
 .bottomDrawer:not([open]) {
   height: 20px;
 }
-
 
 
 .rightDrawer {
@@ -65,6 +64,7 @@
 .rightDrawer:not([open]) {
   width: 20px;
 }
+
 
 .leftDrawer {
   padding: 3px 7px 3px 0px; 
@@ -157,4 +157,12 @@
 }
 .leftDrawer:not([open]) > summary:hover {
   list-style-type: '▾ ';
+}
+
+
+
+@media (max-width: 622px) {
+.leftDrawer {display: none;}
+.rightDrawer {display: none;}
+.bottomDrawer {display: none;}
 }
