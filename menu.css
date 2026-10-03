@@ -91,7 +91,6 @@
 .mobileOnly {
  display: none;
 }
-
 @media (max-width: 622px) {
   .mobileOnly {
     display: inline;

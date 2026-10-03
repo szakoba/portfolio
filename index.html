@@ -148,8 +148,8 @@
   <part-menu class="menu">
     <div style="display:flex; margin-right:auto;">
       <details class="mainMenu" name="mainMenu" id="mainMenu" style="padding: 0px 10px 7px 10px;" 
-      onmouseleave="this.removeAttribute('open')" 
-      onmouseenter="this.setAttribute('open', 'open')"> <!--NAVIGATION-->
+      onmouseleave="if ($(window).width() > 622) {this.removeAttribute('open')}" 
+      onmouseenter="if ($(window).width() > 622) {this.setAttribute('open', 'open')}"> <!--NAVIGATION-->
       <!--script>
                 function closeMenu () {
           document.getElementById('mainMenu').style.setProperty("opacity","66%");
