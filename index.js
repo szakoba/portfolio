@@ -147,3 +147,15 @@ if (darkModeMql && darkModeMql.matches) {
   darkMode();
 }
 
+const menuDrawers = document.getElementsByClassName("menuDrawer");
+function setNames () {
+  menuDrawers.forEach((menuDrawer) => {
+    if ($(window).width() <= 622) {
+      menuDrawer.createAttribute('name','menuDrawer');
+    } else {
+      menuDrawer.removeAttribute('name','menuDrawer'); 
+    }
+  });
+}
+setNames();
+document.addEventListener("resize", setNames());

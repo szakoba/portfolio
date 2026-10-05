@@ -148,7 +148,7 @@
   <part-menu class="menu">
     <div style="display:flex; margin-right:auto;">
       <details class="mainMenu" name="mainMenu" id="mainMenu" style="padding: 0px 10px 7px 10px;" 
-      onmouseleave="if ($(window).width() > 622) {this.removeAttribute('open')}" 
+      onmouseleave="this.removeAttribute('open')" 
       onmouseenter="if ($(window).width() > 622) {this.setAttribute('open', 'open')}"> <!--NAVIGATION-->
       <!--script>
                 function closeMenu () {
@@ -190,16 +190,16 @@
         <div class="modeSelector" id="offButton" onclick="darkMode()"><span style="font-size: 16px; position:relative; top:1px;">&#x262F; </span>lights off</div>
         <div class="modeSelector" id="onButton" style="display: none;" onclick="lightMode()"><span style="font-size: 16px; position:relative; top:1px;">&#x262F; </span>lights on</div>
         <span style="line-height: 1.5em;">
-          <a href="en/main.html" target="mainframe">HOME PAGE</a>
-          <a class="mobileOnly" href="en/aboutme.html" target="mainframe"><br>ABOUT ME</a>
-          <a href="en/blog.html" target="mainframe"><br>BLOG</a>
-          <a class="mobileOnly" href="en/resume.html" target="mainframe"><br>RESUMÉ / CV</a>
-          <a class="mobileOnly" href="en/contactme.html" target="mainframe"><br>CONTACT OPTIONS</a>        
+          <a href="en/main.html" target="mainframe" onclick="pageSelected()">HOME PAGE</a>
+          <a class="mobileOnly" href="en/aboutme.html" target="mainframe" onclick="pageSelected()"><br>ABOUT ME</a>
+          <a href="en/blog.html" target="mainframe" onclick="pageSelected()"><br>BLOG</a>
+          <a class="mobileOnly" href="en/resume.html" target="mainframe" onclick="pageSelected()"><br>RESUMÉ / CV</a>
+          <a class="mobileOnly" href="en/contactme.html" target="mainframe" onclick="pageSelected()"><br>CONTACT OPTIONS</a>        
         </span>
-        <details class="menuDrawer" style="padding-top: 2px;"><summary>design & creative</summary>
+        <details id="menuA" class="menuDrawer" style="padding-top: 2px;"><summary>design & creative</summary>
           <div style="height:4px; width:100%"></div>
           <a id="linkA01" class="done" href="en/youngcreatives2.html" target="mainframe" onclick="pageSelected()">Zwolnieni z Teorii &#x00d7; Żabka</a><br>
-          <a id="linkA02" class="wip" href="en/niedoczekanie.html" target="mainframe" onclick="pageSelected()">Niedoczekanie</a><br>
+          <a id="linkA02" class="done" href="en/niedoczekanie.html" target="mainframe" onclick="pageSelected()">Niedoczekanie</a><br>
           <a id="linkA03" class="todo" href="en/mlekpol.html" target="mainframe" onclick="pageSelected()">Mlekpol / Łaciate</a><br>
           <a id="linkA04" class="done" href="en/youngcreatives1.html" target="mainframe" onclick="pageSelected()">Familijne</a><br>
           <a id="linkA05" class="todo" href="en/jazgot.html" target="mainframe" onclick="pageSelected()">mBank / Jazgot</a><br>
@@ -210,7 +210,7 @@
           <a id="linkA10" class="done" href="en/stereozofia.html" target="mainframe" onclick="pageSelected()">Stereozofia</a><br>
         </details>
 
-        <details class="menuDrawer"><summary>motion design</summary>
+        <details id="menuB" class="menuDrawer"><summary>motion design</summary>
           <div style="height:4px; width:100%"></div>
           <a id="linkB01" class="todo" href="en/danone.html" target="mainframe" onclick="pageSelected()">Danone</a><br>
           <a id="linkB02" class="todo" href="en/mbankzabka.html" target="mainframe" onclick="pageSelected()">mBank &#x00d7; Żabka</a><br>
@@ -220,7 +220,7 @@
           <a id="linkB06" class="todo" href="en/cas.html" target="mainframe" onclick="pageSelected()">Centrum Archiwistyki Społecznej</a><br>
         </details>
 
-        <details class="menuDrawer"><summary>fonts & type design</summary>
+        <details id="menuC" class="menuDrawer"><summary>fonts & type design</summary>
           <div style="height:4px; width:100%"></div>
           <a id="linkC01" class="todo" href="en/achtung.html" target="mainframe" onclick="pageSelected()">Achtung</a><br>
           <a id="linkC02" class="todo" href="en/urlop.html" target="mainframe" onclick="pageSelected()">Urlop</a><br>
@@ -231,7 +231,7 @@
           <a id="linkC07" class="external" target="_blank" href="https://www.myfonts.com/collections/miko-aj-grabowski-foundry&pageType=foundryPage">buy my fonts&ensp;▸</a>
         </details>
 
-        <details class="menuDrawer"><summary>features & links</summary>
+        <details id="menuD" class="menuDrawer"><summary>features & links</summary>
           <div style="height:4px; width:100%"></div>
           <a class="external" href="https://typoteka.pl/pl/designer/mikolaj-grabowski" target="_blank">Typoteka&ensp;▸</a><br>
           <a class="external" href="https://issuu.com/beczmiana/docs/notes105-internet/192" target="_blank">Bęc Zmiana /&nbsp;NN6T#105&ensp;▸</a><br> 

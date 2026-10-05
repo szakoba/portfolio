@@ -1,0 +1,22 @@
+.fontDetail summary {
+  text-transform: none !important;
+  padding-bottom:5px;
+  padding-top:5px;
+  margin-bottom:0px;  
+  text-align:left;
+}
+.fontDetail {
+  padding: 1px 10px 0px 10px; 
+  border: solid var(--FGcolor);
+  border-width: 0px 1px 1px 1px;
+  background-color: var(--BGcolor);
+  font-size: 14px; 
+  text-align: justify;
+  text-justify: auto;
+}
+.fontDetail:first-child {
+  border-width: 1px 1px 1px 1px !important;
+}
+.fontDetail[open] {
+  padding-bottom:5px;
+}
